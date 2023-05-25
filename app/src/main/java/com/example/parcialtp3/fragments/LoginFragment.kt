@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import com.example.parcialtp3.R
 
@@ -22,7 +25,8 @@ class LoginFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         fragmentView =  inflater.inflate(R.layout.login_fragment, container, false)
-
+        val activity = requireActivity() as AppCompatActivity
+        activity.supportActionBar?.hide()
         val btnLogin = fragmentView.findViewById<Button>(R.id.btnLogin)
 
         btnLogin.setOnClickListener {var action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()

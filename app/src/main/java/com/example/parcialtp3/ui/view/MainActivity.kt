@@ -1,7 +1,8 @@
-package com.example.parcialtp3
+package com.example.parcialtp3.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.parcialtp3.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

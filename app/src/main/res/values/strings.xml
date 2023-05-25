@@ -3,9 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="btnLogin">Next</string>
     <string name="textRegister">Register</string>
-    <string name="editTextTextEmailAddress">Email adress</string>
+    <string name="editTextTextEmailAddress">Email address</string>
     <string name="btnMainEnter">Accede</string>
     <string name="editTextTextPassword">Create password</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slider_Profile">Perfil</string>
+    <string name="slider_Configuration">Configuración</string>
+    <string name="slider_Favorites">Favoritos</string>
 </resources>

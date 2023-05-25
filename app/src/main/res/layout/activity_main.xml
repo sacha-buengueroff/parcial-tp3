@@ -6,7 +6,8 @@ xmlns:tools="http://schemas.android.com/tools"
 android:id="@+id/drawer_layout"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".ui.view.MainActivity">
+tools:context=".ui.view.MainActivity"
+    >
 
 <androidx.fragment.app.FragmentContainerView
     android:id="@+id/fragmentContainerView"
@@ -14,9 +15,7 @@ tools:context=".ui.view.MainActivity">
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:defaultNavHost="true"
-    app:navGraph="@navigation/main_navigation"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp" />
+    app:navGraph="@navigation/main_navigation" />
 
 <com.google.android.material.navigation.NavigationView
     android:id="@+id/nav_view"

@@ -25,7 +25,7 @@ class LoginFragment : Fragment() {
 
         val btnLogin = fragmentView.findViewById<Button>(R.id.btnLogin)
 
-        btnLogin.setOnClickListener {var action = LoginFragmentDirections.actionLoginFragmentToHomeFragment3()
+        btnLogin.setOnClickListener {var action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
             fragmentView.findNavController().navigate(action) }
         return fragmentView
     }

@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.BlankFragment"
-    android:background="@drawable/unsplash_WPVtT0MEM00"
-    >
+    android:background="@drawable/unsplash_wpvtt0mem00"
+    tools:context=".fragments.BlankFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -107,8 +106,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginBottom="7dp"
-                android:hint="@string/editTextTextPassword"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:hint="@string/editTextTextPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button

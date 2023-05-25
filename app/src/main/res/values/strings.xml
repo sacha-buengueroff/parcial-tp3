@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Parcial TP3</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="btnLogin">Next</string>
-    <string name="textRegister">Register</string>
+    <string name="btnLogin">INGRESAR</string>
+    <string name="olvideContra">Olvidé la contraseña</string>
+    <string name="premier">Premier</string>
+    <string name="rentcar">RentCar</string>
     <string name="editTextTextEmailAddress">Email adress</string>
     <string name="btnMainEnter">Accede</string>
     <string name="editTextTextPassword">Create password</string>

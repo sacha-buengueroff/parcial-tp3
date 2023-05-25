@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="btnLogin">Next</string>
     <string name="textRegister">Register</string>
-    <string name="editTextTextEmailAddress">Email address</string>
+    <string name="editTextTextEmailAddress">User</string>
     <string name="btnMainEnter">Accede</string>
     <string name="editTextTextPassword">Create password</string>
     <!-- TODO: Remove or change this placeholder text -->

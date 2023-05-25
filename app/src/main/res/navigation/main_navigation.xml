@@ -20,7 +20,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.parcialtp3.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="userName"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/configurationFragment"
         android:name="com.example.parcialtp3.fragments.ConfigurationFragment"

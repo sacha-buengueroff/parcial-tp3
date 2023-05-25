@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/unsplash_wpvtt0mem00"
     tools:context=".fragments.LoginFragment">
 
     <LinearLayout
@@ -83,6 +82,7 @@
             app:counterOverflowTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_UserName"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginBottom="30dp"
@@ -103,6 +103,7 @@
             app:boxStrokeWidth="3dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_Password"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginBottom="7dp"

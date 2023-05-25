@@ -19,6 +19,9 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class HomeFragment : Fragment() {
+    lateinit var fragmentView: View
+
+    lateinit var user : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +32,23 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Configura el menu hamburguesa como visible
         val activity = requireActivity() as AppCompatActivity
         activity.supportActionBar?.show()
-        return inflater.inflate(R.layout.fragment_home, container, false)
+
+        fragmentView = inflater.inflate(R.layout.fragment_home, container, false)
+
+
+        return fragmentView
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        user = HomeFragmentArgs.fromBundle(requireArguments()).userName
+
+
+
     }
 
 

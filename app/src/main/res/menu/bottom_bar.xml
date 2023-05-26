@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home_icon"
+        android:title="@string/bottom_Home" />
+
+    <item
+        android:id="@+id/autosFragment"
+        android:icon="@drawable/autos_icon"
+        android:title="@string/bottom_Autos"
+        />
+    <item
+        android:id="@+id/buscarFragment"
+        android:icon="@drawable/search_icon"
+        android:title="@string/bottom_Buscar" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile_icon"
+        android:title="@string/bottom_Perfil" />
+</menu>

@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object APIServicesBuilder {
-    private val BASE_URL= "https://api.api-ninjas.com/v1"
+    private val BASE_URL= "https://api.api-ninjas.com/v1/"
     private val API_KEY = "CCwcToqTmJYBJE9b3lk1zg==ohwzHGciQqeYatVH"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
@@ -18,7 +18,7 @@ object APIServicesBuilder {
         .addInterceptor { chain ->
             val originalRequest = chain.request()
             val modifiedRequest = originalRequest.newBuilder()
-                .header("X-Api-Key", API_KEY) // Agrega el header con tu clave de API
+                .header("X-Api-Key", API_KEY)
                 .build()
             chain.proceed(modifiedRequest)
         }

@@ -1,4 +1,4 @@
-package com.example.parcialtp3.model.response.domain
+package com.example.parcialtp3.model.domain
 
 import com.google.gson.annotations.SerializedName
 

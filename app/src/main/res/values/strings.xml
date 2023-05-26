@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Parcial TP3</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="textRegister">Register</string>
     <string name="btnLogin">INGRESAR</string>
     <string name="olvideContra">Olvidé la contraseña</string>
     <string name="premier">Premier</string>
@@ -8,6 +8,13 @@
     <string name="editTextTextEmailAddress">User name</string>
     <string name="btnMainEnter">Accede</string>
     <string name="editTextTextPassword">Password</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slider_Profile">Perfil</string>
+    <string name="slider_Configuration">Configuración</string>
+    <string name="slider_Favorites">Favoritos</string>
+
+    <string name="bottom_Home">Home</string>
+    <string name="bottom_Autos">Autos</string>
+    <string name="bottom_Buscar">Buscar</string>
+    <string name="bottom_Perfil">Perfil</string>
 </resources>

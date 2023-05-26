@@ -7,7 +7,7 @@
     tools:context=".fragments.LoginFragment">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutInicio"
         android:layout_width="380dp"
         android:layout_height="556dp"
         android:layout_marginStart="20dp"
@@ -24,7 +24,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="43dp"
+            android:layout_height="32dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="90dp"
             android:orientation="horizontal">
@@ -36,25 +36,28 @@
 
 
             <TextView
-                android:id="@+id/textView5"
-                android:layout_width="86dp"
-                android:layout_height="61dp"
+                android:id="@+id/textViewTituloPremier"
+                android:layout_width="62dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:background="#3330E5"
-                android:gravity="end"
-                android:text="Premier"
+                android:fontFamily="@font/fira_sans_bold"
+                android:gravity="center_horizontal"
+                android:text="@string/premier"
                 android:textColor="@color/white"
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView6"
-                android:layout_width="86dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:id="@+id/textViewTituloRentcar"
+                android:layout_width="58dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:background="#FFCC00"
-                android:text="RentCar"
+                android:fontFamily="@font/fira_sans_bold"
+                android:text="@string/rentcar"
                 android:textColor="@color/black"
                 android:textSize="34sp"
                 android:textStyle="bold" />
@@ -62,6 +65,7 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1" />
 
         </LinearLayout>
@@ -76,9 +80,9 @@
             app:boxCornerRadiusBottomStart="40dp"
             app:boxCornerRadiusTopEnd="40dp"
             app:boxCornerRadiusTopStart="40dp"
-            app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+            app:boxStrokeColor="@color/borders"
             app:boxStrokeErrorColor="@color/black"
-            app:boxStrokeWidth="3dp"
+            app:boxStrokeWidth="2dp"
             app:counterOverflowTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -100,7 +104,7 @@
             app:boxCornerRadiusTopEnd="40dp"
             app:boxCornerRadiusTopStart="40dp"
             app:boxStrokeColor="@color/black"
-            app:boxStrokeWidth="3dp">
+            app:boxStrokeWidth="2dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txt_Password"
@@ -111,15 +115,26 @@
                 android:hint="@string/editTextTextPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/olvidarContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/olvideContra"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="16sp"/>
+
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="219dp"
             android:layout_height="59dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
-            android:backgroundTint="@color/black"
-            android:text="INGRESAR"
-            app:cornerRadius="10dp" />
+            android:backgroundTint="#212121"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="@string/btnLogin"
+            android:textSize="20sp"
+            app:cornerRadius="200dp" />
 
     </LinearLayout>
 

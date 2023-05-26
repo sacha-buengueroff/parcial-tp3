@@ -12,4 +12,9 @@
     <string name="slider_Profile">Perfil</string>
     <string name="slider_Configuration">Configuración</string>
     <string name="slider_Favorites">Favoritos</string>
+
+    <string name="bottom_Home">Home</string>
+    <string name="bottom_Autos">Autos</string>
+    <string name="bottom_Buscar">Buscar</string>
+    <string name="bottom_Perfil">Perfil</string>
 </resources>

@@ -35,4 +35,14 @@
         android:name="com.example.parcialtp3.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/autosFragment"
+        android:name="com.example.parcialtp3.fragments.AutosFragment"
+        android:label="fragment_autos"
+        tools:layout="@layout/fragment_autos" />
+    <fragment
+        android:id="@+id/buscarFragment"
+        android:name="com.example.parcialtp3.fragments.BuscarFragment"
+        android:label="fragment_buscar"
+        tools:layout="@layout/fragment_buscar" />
 </navigation>

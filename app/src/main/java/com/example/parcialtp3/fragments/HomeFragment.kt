@@ -33,8 +33,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Configura el menu hamburguesa como visible
-        val activity = requireActivity() as AppCompatActivity
-        activity.supportActionBar?.show()
+
 
         fragmentView = inflater.inflate(R.layout.fragment_home, container, false)
 

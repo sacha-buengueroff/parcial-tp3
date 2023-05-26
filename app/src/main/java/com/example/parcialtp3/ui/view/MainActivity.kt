@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.parcialtp3.R
@@ -32,26 +33,15 @@ class MainActivity : AppCompatActivity() {
     private fun setupDrawerLayout() {
 
         val navController = navHostFragment.navController
-        // Vinculo la navegación del drawer con la del graph
         navigationView.setupWithNavController(navController)
 
-        // Configuro la appbar para que muestre el icono del drawer y actualice el titulo
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
-        // Listener para cuando se realiza la navegacion
+
         navController.addOnDestinationChangedListener { _, _, _ ->
-            // Aca le digo que quiero que mi icono izquierdo de la appbar sea el del drawer
             supportActionBar?.setHomeAsUpIndicator(R.drawable.menu)
         }
 
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            if(destination.id == R.id.loginFragment) {
-                supportActionBar?.hide()
-                bottomNavView.visibility = View.GONE
-            } else {
-                supportActionBar?.show()
-                bottomNavView.visibility = View.VISIBLE
-            }
-        }
+        setToolBarVisibility(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -62,5 +52,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         return false
+    }
+
+    fun setToolBarVisibility (navController: NavController) {
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.loginFragment) {
+                supportActionBar?.hide()
+                bottomNavView.visibility = View.GONE
+            } else {
+                supportActionBar?.show()
+                bottomNavView.visibility = View.VISIBLE
+            }
+        }
     }
 }

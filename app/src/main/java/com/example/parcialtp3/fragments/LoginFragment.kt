@@ -7,13 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.parcialtp3.R
+import com.example.parcialtp3.ui.viewmodel.LoginViewModel
 
 class LoginFragment : Fragment() {
 
-    lateinit var fragmentView : View
+    lateinit var loginView : View
+    lateinit var txtUserName : TextView
+    lateinit var btnLogin : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -23,26 +26,23 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        loginView =  inflater.inflate(R.layout.login_fragment, container, false)
 
-        fragmentView =  inflater.inflate(R.layout.login_fragment, container, false)
+        txtUserName = loginView.findViewById<TextView>(R.id.txt_UserName)
+        btnLogin = loginView.findViewById<Button>(R.id.btnLogin)
 
-        //Oculto el menu hamburguesa del login
-        val activity = requireActivity() as AppCompatActivity
-        activity.supportActionBar?.hide()
-
-        //Me traigo el nombre TODO: pasarlo a View Model(con funcionalidad que requira un mail y user)
-        val txtUserName = fragmentView.findViewById<TextView>(R.id.txt_UserName)
-        val userName = txtUserName.text.toString()
-
-
-        val btnLogin = fragmentView.findViewById<Button>(R.id.btnLogin)
-        btnLogin.setOnClickListener {
-            var action = LoginFragmentDirections.actionLoginFragmentToHomeFragment(userName)
-            fragmentView.findNavController().navigate(action)
-        }
-
-
-        return fragmentView
+        return loginView
     }
 
+    override fun onStart() {
+        super.onStart()
+
+        val loginViewModel = ViewModelProvider(requireActivity()).get(LoginViewModel::class.java)
+
+        btnLogin.setOnClickListener {
+            loginViewModel.saveUserName(txtUserName.text.toString())
+            var action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+            loginView.findNavController().navigate(action)
+        }
+    }
 }

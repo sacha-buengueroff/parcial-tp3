@@ -4,11 +4,11 @@ data class CarResponse(
     val results:List<Car>
 )
 data class Car (
-    val model:String,
-    val make:String,
-    val transmission:String,
     val fuel_type:String,
+    val make:String,
+    val model:String,
+    val transmission:String,
     val year:Int
-    // TODO: revisar que atributo es el "Two seater" si fuera class como lo declaro?
+    // TODO: revisar que atributo es el "Two seater" si fuera class como lo declaro? porque class es una palabra reservada y si no no lo mapea el gson
 
         )

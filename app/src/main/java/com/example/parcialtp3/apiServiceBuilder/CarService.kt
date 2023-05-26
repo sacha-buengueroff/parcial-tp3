@@ -6,6 +6,8 @@ import retrofit2.http.GET
 
 interface CarService {
 
-    @GET("/cars")
+    @GET("/cars?year=2018")
+    //TODO: fijarese como hacer para no poner ningun parametro,
+    // por lo pronto el limit por default es 5 , solo limit no me deja ingresar y car solo tampoco
     fun getPokemonList(): Call<CarResponse>
 }

@@ -1,17 +1,22 @@
 package com.example.parcialtp3.ui.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.example.parcialtp3.R
 import androidx.navigation.ui.setupWithNavController
+import com.example.parcialtp3.R
+import com.example.parcialtp3.ui.viewmodel.LoginViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navHostFragment: NavHostFragment
@@ -28,10 +33,21 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navHostController = navHostFragment.navController
         bottomNavView = findViewById(R.id.bottom_bar)
-
         NavigationUI.setupWithNavController(bottomNavView, navHostController)
+        val userNameTextView =
+            navigationView.getHeaderView(0).findViewById<TextView>(R.id.txt_UserName)
+        var loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        val userNameObserver: Observer<String?> = object : Observer<String?> {
+            override fun onChanged(userName: String?) {
+                userNameTextView.text = userName
+            }
+        }
+        loginViewModel.userName.observe(this, userNameObserver);
+
         setupDrawerLayout()
     }
+
+
     private fun setupDrawerLayout() {
         navigationView.setupWithNavController(navHostController)
 

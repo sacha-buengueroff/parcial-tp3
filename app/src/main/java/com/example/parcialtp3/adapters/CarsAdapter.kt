@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
 import com.example.parcialtp3.model.domain.Car
 
-class CarsAdapter (private val carList: MutableLiveData<List<Car>>): RecyclerView.Adapter<CarsAdapter.CarViewHolder>(){
+class CarsAdapter (private val carList: List<Car>): RecyclerView.Adapter<CarsAdapter.CarViewHolder>(){
 
     //TODO ver como carajo hacer para usar los beneficios de la observabilidad que da el MutableLiveData
 
@@ -18,10 +18,10 @@ class CarsAdapter (private val carList: MutableLiveData<List<Car>>): RecyclerVie
         return CarViewHolder(view)
     }
 
-    override fun getItemCount(): Int = carList.value!!.size
+    override fun getItemCount(): Int = carList.size
 
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
-        val car = carList.value!![position]
+        val car = carList[position]
         //TODO completar el resto de setters
         holder.setCarClass(car.carClass)
         holder.setFuelType(car.fuelType)

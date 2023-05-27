@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.parcialtp3.R
 import com.example.parcialtp3.apiServiceBuilder.APIServicesBuilder
-import com.example.parcialtp3.model.response.CarResponse
+import com.example.parcialtp3.model.domain.Car
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,14 +29,14 @@ class BuscarFragment : Fragment() {
     private fun getCars(){
         val service = APIServicesBuilder.create()
 
-        service.getCarList().enqueue(object: Callback<CarResponse> {
+        service.getCarList().enqueue(object: Callback<List<Car>> {
             override fun onResponse(
-                call: Call<CarResponse>,
-                response: Response<CarResponse>
+                call: Call<List<Car>>,
+                response: Response<List<Car>>
             ){
-              println(response.body()!!.results)
+              println(response.body()!!)
             }
-            override fun onFailure(call: Call<CarResponse>, t: Throwable) {
+            override fun onFailure(call: Call<List<Car>>, t: Throwable) {
                 println(t.message)
             }
         })

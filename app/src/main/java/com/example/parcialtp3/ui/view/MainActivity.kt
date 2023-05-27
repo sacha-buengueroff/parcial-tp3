@@ -34,6 +34,11 @@ class MainActivity : AppCompatActivity() {
         navHostController = navHostFragment.navController
         bottomNavView = findViewById(R.id.bottom_bar)
         NavigationUI.setupWithNavController(bottomNavView, navHostController)
+        setupNavHeader()
+        setupDrawerLayout()
+    }
+
+    private fun setupNavHeader() {
         val userNameTextView =
             navigationView.getHeaderView(0).findViewById<TextView>(R.id.txt_UserName)
         var loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
@@ -43,8 +48,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         loginViewModel.userName.observe(this, userNameObserver);
-
-        setupDrawerLayout()
     }
 
 

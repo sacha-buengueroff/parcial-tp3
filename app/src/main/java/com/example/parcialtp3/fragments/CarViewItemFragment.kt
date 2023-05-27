@@ -7,18 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.parcialtp3.R
 
-class BuscarFragment : Fragment() {
-    lateinit var fragmentView: View
+class CarViewItemFragment : Fragment() {
+    // TODO: Rename and change types of parameters
+    private var param1: String? = null
+    private var param2: String? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        fragmentView = inflater.inflate(R.layout.fragment_buscar, container, false)
-        return fragmentView
+        return inflater.inflate(R.layout.fragment_car_view_item, container, false)
     }
-
-
-
 }

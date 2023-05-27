@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navHostFragment: NavHostFragment
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
+    private lateinit var navHostController: NavController
     private lateinit var bottomNavView : BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,23 +26,22 @@ class MainActivity : AppCompatActivity() {
         navigationView = findViewById(R.id.nav_view)
         navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        navHostController = navHostFragment.navController
         bottomNavView = findViewById(R.id.bottom_bar)
 
-        NavigationUI.setupWithNavController(bottomNavView, navHostFragment.navController)
+        NavigationUI.setupWithNavController(bottomNavView, navHostController)
         setupDrawerLayout()
     }
     private fun setupDrawerLayout() {
+        navigationView.setupWithNavController(navHostController)
 
-        val navController = navHostFragment.navController
-        navigationView.setupWithNavController(navController)
+        NavigationUI.setupActionBarWithNavController(this, navHostController, drawerLayout)
 
-        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
-
-        navController.addOnDestinationChangedListener { _, _, _ ->
+        navHostController.addOnDestinationChangedListener { _, _, _ ->
             supportActionBar?.setHomeAsUpIndicator(R.drawable.menu)
         }
 
-        setToolBarVisibility(navController)
+        setToolBarVisibility()
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -54,8 +54,8 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
-    fun setToolBarVisibility (navController: NavController) {
-        navController.addOnDestinationChangedListener { _, destination, _ ->
+    fun setToolBarVisibility () {
+        navHostController.addOnDestinationChangedListener { _, destination, _ ->
             if(destination.id == R.id.loginFragment) {
                 supportActionBar?.hide()
                 bottomNavView.visibility = View.GONE

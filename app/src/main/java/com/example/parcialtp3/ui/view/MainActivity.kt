@@ -3,6 +3,7 @@ package com.example.parcialtp3.ui.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Busqueda de elementos de la vista
         drawerLayout = findViewById(R.id.drawer_layout)
         navigationView = findViewById(R.id.nav_view)
         navHostFragment =
@@ -29,8 +31,18 @@ class MainActivity : AppCompatActivity() {
         navHostController = navHostFragment.navController
         bottomNavView = findViewById(R.id.bottom_bar)
 
+        //Set up custom tool bar
+        var toolbar = findViewById<Toolbar>(R.id.toolbar_custom)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        //Set up buttom navigation bar
         NavigationUI.setupWithNavController(bottomNavView, navHostController)
+
+        //Set up Drawer Layout menu
         setupDrawerLayout()
+
+
     }
     private fun setupDrawerLayout() {
         navigationView.setupWithNavController(navHostController)
@@ -40,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         navHostController.addOnDestinationChangedListener { _, _, _ ->
             supportActionBar?.setHomeAsUpIndicator(R.drawable.menu)
         }
-
         setToolBarVisibility()
     }
 
@@ -50,7 +61,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             drawerLayout.openDrawer(GravityCompat.START)
         }
-
         return false
     }
 

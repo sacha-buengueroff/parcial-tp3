@@ -2,12 +2,9 @@ package com.example.parcialtp3.ui.view
 
 import android.os.Bundle
 import android.view.View
-<<<<<<< HEAD
 import androidx.appcompat.widget.Toolbar
-=======
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
->>>>>>> develop
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
@@ -42,6 +39,9 @@ class MainActivity : AppCompatActivity() {
         var toolbar = findViewById<Toolbar>(R.id.toolbar_custom)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        //Set up Nav Header
+        setupNavHeader()
 
         //Set up buttom navigation bar
         NavigationUI.setupWithNavController(bottomNavView, navHostController)

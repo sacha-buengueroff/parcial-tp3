@@ -6,7 +6,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -42,12 +41,9 @@ class MainActivity : AppCompatActivity() {
         val userNameTextView =
             navigationView.getHeaderView(0).findViewById<TextView>(R.id.txt_UserName)
         var loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
-        val userNameObserver: Observer<String?> = object : Observer<String?> {
-            override fun onChanged(userName: String?) {
-                userNameTextView.text = userName
-            }
+        loginViewModel.userName.observe(this) { result ->
+            userNameTextView.text = result.toString()
         }
-        loginViewModel.userName.observe(this, userNameObserver);
     }
 
 

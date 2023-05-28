@@ -6,6 +6,8 @@ xmlns:tools="http://schemas.android.com/tools"
 android:id="@+id/drawer_layout"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +20,6 @@ android:layout_height="match_parent">
             android:layout_height="match_parent"
             app:defaultNavHost="true"
             app:navGraph="@navigation/main_navigation" />
-
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_bar"
@@ -50,9 +51,6 @@ android:layout_height="match_parent">
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="100dp"
                 android:orientation="horizontal">
-
-
-
 
                 <TextView
                     android:id="@+id/toolbar_txtPremier"
@@ -86,9 +84,7 @@ android:layout_height="match_parent">
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1" />
-
             </LinearLayout>
-
         </androidx.appcompat.widget.Toolbar>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -101,4 +97,5 @@ android:layout_height="match_parent">
         app:menu="@menu/sliding_menu"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/slider_header"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navigationView: NavigationView
     private lateinit var navHostController: NavController
     private lateinit var bottomNavView : BottomNavigationView
+    private var isHamburgerMenu: Boolean  = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,8 +49,6 @@ class MainActivity : AppCompatActivity() {
 
         //Set up Drawer Layout menu
         setupDrawerLayout()
-
-
     }
 
     private fun setupNavHeader() {
@@ -61,15 +60,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun setupDrawerLayout() {
         navigationView.setupWithNavController(navHostController)
 
         NavigationUI.setupActionBarWithNavController(this, navHostController, drawerLayout)
 
-        navHostController.addOnDestinationChangedListener { _, _, _ ->
+        /*navHostController.addOnDestinationChangedListener { _, _, _ ->
             supportActionBar?.setHomeAsUpIndicator(R.drawable.menu)
-        }
+        }*/
+        setToolBarIcon()
         setToolBarVisibility()
     }
 
@@ -77,7 +76,11 @@ class MainActivity : AppCompatActivity() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
         } else {
-            drawerLayout.openDrawer(GravityCompat.START)
+            if (isHamburgerMenu) {
+                drawerLayout.openDrawer(GravityCompat.START)
+            } else {
+                navHostController.navigateUp()
+            }
         }
         return false
     }
@@ -90,6 +93,20 @@ class MainActivity : AppCompatActivity() {
             } else {
                 supportActionBar?.show()
                 bottomNavView.visibility = View.VISIBLE
+            }
+        }
+    }
+
+    fun setToolBarIcon () {
+        navHostController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.homeFragment) {
+                // Mostrar el icono de hamburguesa
+                supportActionBar?.setHomeAsUpIndicator(R.drawable.menu)
+                isHamburgerMenu = true
+            } else {
+                // Mostrar el icono de flecha de retroceso
+                supportActionBar?.setHomeAsUpIndicator(R.drawable.back_arrow)
+                isHamburgerMenu = false
             }
         }
     }

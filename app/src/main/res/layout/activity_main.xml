@@ -99,5 +99,6 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/sliding_menu"
-        android:fitsSystemWindows="true"/>
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/slider_header"/>
 </androidx.drawerlayout.widget.DrawerLayout>

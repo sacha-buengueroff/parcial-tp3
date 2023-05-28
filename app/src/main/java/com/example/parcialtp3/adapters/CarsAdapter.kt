@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
 import com.example.parcialtp3.model.domain.Car
 
-class CarsAdapter (private val carList: List<Car>): RecyclerView.Adapter<CarsAdapter.CarViewHolder>(){
+class   CarsAdapter (private val carList: List<Car>): RecyclerView.Adapter<CarsAdapter.CarViewHolder>(){
 
     //TODO ver como carajo hacer para usar los beneficios de la observabilidad que da el MutableLiveData
 

@@ -16,4 +16,5 @@
     <color name="colorTextConfig">#001E2F</color>
     <color name="backgroundConfig">#FCFCFF</color>
     <color name="sombras">#57000000</color>
+    <color name="cantMarcas">#007BFF</color>
 </resources>

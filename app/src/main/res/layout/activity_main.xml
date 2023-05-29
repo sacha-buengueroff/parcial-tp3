@@ -61,7 +61,7 @@
                 <TextView
                     android:id="@+id/toolbar_txtPremier"
                     android:layout_width="10dp"
-                    android:layout_height="34dp"
+                    android:layout_height="37dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="4"
                     android:background="#3330E5"
@@ -76,7 +76,7 @@
                 <TextView
                     android:id="@+id/toolbar_txtRentcar"
                     android:layout_width="14dp"
-                    android:layout_height="34dp"
+                    android:layout_height="37dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="4"
                     android:background="#FFCC00"

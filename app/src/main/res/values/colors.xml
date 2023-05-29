@@ -12,4 +12,5 @@
     <color name="mtrl_textinput_default_box_stroke_color">#000000</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="darkBlue">#001D42</color>
+    <color name="grey">#DCDCDC</color>
 </resources>

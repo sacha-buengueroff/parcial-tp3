@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var navHostController: NavController
-    private lateinit var bottomNavView : BottomNavigationView
+    private lateinit var bottomNavView: BottomNavigationView
     private lateinit var toolbar: Toolbar
-    private var isHamburgerMenu: Boolean  = true
+    private var isHamburgerMenu: Boolean = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         //setup toolbar visibility
         setupToolbar()
     }
+
     override fun onSupportNavigateUp(): Boolean {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
@@ -85,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navHostController, drawerLayout)
     }
 
-    private fun setToolBarIcon () {
+    private fun setToolBarIcon() {
         navHostController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.homeFragment) {
                 // Mostrar el icono de hamburguesa

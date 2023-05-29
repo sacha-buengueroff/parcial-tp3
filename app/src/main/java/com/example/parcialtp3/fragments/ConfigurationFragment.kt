@@ -16,8 +16,7 @@ class ConfigurationFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         configView = inflater.inflate(R.layout.fragment_configuration, container, false)
         var toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar_custom)

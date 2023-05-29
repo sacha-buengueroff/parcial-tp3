@@ -13,8 +13,7 @@ class BuscarFragment : Fragment() {
     lateinit var buscarView: View
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         buscarView = inflater.inflate(R.layout.fragment_buscar, container, false)
@@ -24,7 +23,4 @@ class BuscarFragment : Fragment() {
 
         return buscarView
     }
-
-
-
 }

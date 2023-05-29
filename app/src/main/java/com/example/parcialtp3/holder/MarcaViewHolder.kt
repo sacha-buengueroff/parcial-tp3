@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
 import java.lang.Exception
 
-class MarcaViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+class MarcaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private var vista: View
 
     init {
@@ -28,11 +28,11 @@ class MarcaViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val imgMake = vista.findViewById<ImageView>(R.id.imgMarcaLogo)
         try {
             println("make:" + make)
-            val drawableId = vista.resources.getIdentifier(make, "drawable", vista.context.packageName)
+            val drawableId =
+                vista.resources.getIdentifier(make, "drawable", vista.context.packageName)
             println("drawableId:" + drawableId)
             imgMake.setImageResource(drawableId)
-        }catch (e: Exception)
-        {
+        } catch (e: Exception) {
             println("Imagen no disponible")
         }
     }

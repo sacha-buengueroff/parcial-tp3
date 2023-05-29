@@ -8,7 +8,7 @@ import com.example.parcialtp3.R
 import java.lang.Exception
 
 
-class CarViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+class CarViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private var vista: View
 
     init {
@@ -19,6 +19,7 @@ class CarViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val txtClass = vista.findViewById<TextView>(R.id.txtClass)
         txtClass.text = carClass
     }
+
     fun setFuelType(fuelType: String) {
         val txtClass = vista.findViewById<TextView>(R.id.txtFuelType)
         txtClass.text = fuelType
@@ -28,12 +29,12 @@ class CarViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val imgMake = vista.findViewById<ImageView>(R.id.imgCarLogo)
         try {
             println("make: " + make)
-            val drawableId = vista.resources.getIdentifier(make, "drawable", vista.context.packageName)
+            val drawableId =
+                vista.resources.getIdentifier(make, "drawable", vista.context.packageName)
             println("drawableId: " + drawableId)
             imgMake.setImageResource(drawableId)
-        }catch (e:Exception)
-        {
-          println("Imagen no disponible")
+        } catch (e: Exception) {
+            println("Imagen no disponible")
         }
     }
 
@@ -41,10 +42,12 @@ class CarViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val txtClass = vista.findViewById<TextView>(R.id.txtCarModel)
         txtClass.text = model.replaceFirstChar(Char::titlecase)
     }
+
     fun settransmission(transmission: String) {
         val txtClass = vista.findViewById<TextView>(R.id.txtTransmission)
         txtClass.text = if (transmission == "a") "Automático" else "Manual"
     }
+
     fun setYear(year: String) {
         val txtClass = vista.findViewById<TextView>(R.id.txtYear)
         txtClass.text = year

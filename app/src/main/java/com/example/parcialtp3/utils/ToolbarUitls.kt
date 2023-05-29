@@ -19,7 +19,12 @@ object ToolbarUitls {
         rentcarTextView.visibility = if (!isConfigVisible) View.VISIBLE else View.GONE
 
     }
-    fun setToolBarVisibility(navHostController: NavController, supportActionBar: ActionBar?, bottomNavView: BottomNavigationView) {
+
+    fun setToolBarVisibility(
+        navHostController: NavController,
+        supportActionBar: ActionBar?,
+        bottomNavView: BottomNavigationView
+    ) {
         navHostController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.loginFragment) {
                 supportActionBar?.hide()

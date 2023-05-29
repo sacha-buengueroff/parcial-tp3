@@ -28,4 +28,5 @@
     <string name="labelGenerales">Generales</string>
     <string name="labelModoOscuro">Modo Oscuro</string>
     <string name="labelNotificaciones">Notificaciones</string>
+    <string name="FotoPerfil">FotoPerfil</string>
 </resources>

@@ -1,13 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
     tools:context=".fragments.HomeFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:id="@+id/linearLayoutInicio"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="200dp"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_with_shadow"
+            android:elevation="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardPreventCornerOverlap="false">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background=" #FFCC00"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bmw_auto"
+                    android:contentDescription="Botón de acción1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:text="@string/deportivos"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:contentDescription="Descripción del contenido"/>
+
+                <TextView
+                    android:id="@+id/textoCardAbajo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:text="@string/filtro"
+                    android:textColor="@color/white"
+                    android:contentDescription="Descripción del contenido"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_with_shadow"
+            android:elevation="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background=" #3330E5"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bmw_suv"
+                    android:contentDescription="Botón de acción2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:text="@string/suv"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:contentDescription="Descripción del contenido"/>
+
+                <TextView
+                    android:id="@+id/textoCardAbajo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:text="@string/filtro"
+                    android:textColor="@color/white"
+                    android:contentDescription="Descripción del contenido"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_with_shadow"
+            android:elevation="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="#04D9FF"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bmw_electrico"
+                    android:contentDescription="Botón de acción3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:text="@string/Electricos"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:contentDescription="Descripción del contenido"/>
+
+                <TextView
+                    android:id="@+id/textoCardAbajo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:text="@string/filtro"
+                    android:textColor="@color/white"
+                    android:contentDescription="Descripción del contenido"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>

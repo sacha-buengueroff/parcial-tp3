@@ -29,11 +29,13 @@ class CarViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     fun setMakeImage(make: String) {
         val imgMake = vista.findViewById<ImageView>(R.id.imgCarLogo)
         try {
+            println("make: " + make)
             val drawableId = vista.resources.getIdentifier(make, "drawable", vista.context.packageName)
+            println("drawableId: " + drawableId)
             imgMake.setImageResource(drawableId)
         }catch (e:Exception)
         {
-          println("imagen no disponible")
+          println("Imagen no disponible")
         }
     }
 

@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/linearLayoutInicio"
         android:layout_width="350dp"
-        android:layout_height="464dp"
+        android:layout_height="599dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
@@ -21,7 +21,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="parent">
 
         <SearchView
@@ -52,10 +51,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:background=" #FFCC00"
+                    android:contentDescription="Botón de acción1"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bmw_auto"
-                    android:contentDescription="Botón de acción1"/>
+                    android:src="@drawable/bmw_auto" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -183,6 +182,24 @@
 
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/marcasRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
 
     </LinearLayout>
 

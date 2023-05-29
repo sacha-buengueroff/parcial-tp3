@@ -2,7 +2,7 @@ package com.example.parcialtp3.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.parcialtp3.model.domain.Car
+import com.example.parcialtp3.domain.Car
 
 class AutosViewModel(): ViewModel() {
 

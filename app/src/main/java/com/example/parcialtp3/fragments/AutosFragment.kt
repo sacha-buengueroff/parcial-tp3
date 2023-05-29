@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
 import com.example.parcialtp3.adapters.CarsAdapter
 import com.example.parcialtp3.apiServiceBuilder.APIServicesBuilder
-import com.example.parcialtp3.model.domain.Car
+import com.example.parcialtp3.domain.Car
 import com.example.parcialtp3.utils.ToolbarUitls
 import retrofit2.Call
 import retrofit2.Callback

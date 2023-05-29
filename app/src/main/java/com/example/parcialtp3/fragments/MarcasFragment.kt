@@ -49,7 +49,7 @@ class MarcasFragment : Fragment() {
             Marca("BMW", "25", "bmw.png")
         )
         marcasRecView.apply {
-            layoutManager = LinearLayoutManager(requireActivity())
+            layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
             adapter = MarcasAdapter(listMarcas)
         }
     }

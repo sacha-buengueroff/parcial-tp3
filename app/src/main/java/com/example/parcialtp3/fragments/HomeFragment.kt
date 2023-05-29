@@ -41,15 +41,15 @@ class HomeFragment : Fragment() {
     private fun getMarcas() {
 
         val listMarcas: List<Marca> = listOf(
-            Marca("Maserati","5", "maserati.png"),
-            Marca("Mercedes", "32", "mercedes.png"),
-            Marca("TOGG", "8", "togg.png"),
-            Marca("Porsche", "10", "porsche.png"),
-            Marca("Toyota", "3", "toyota.png"),
-            Marca("BMW", "25", "bmw.png")
+            Marca("Maserati","5", "maserati"),
+            Marca("Mercedes", "32", "mercedes"),
+            Marca("TOGG", "8", "togg"),
+            Marca("Porsche", "10", "porsche"),
+            Marca("Toyota", "3", "toyota"),
+            Marca("BMW", "25", "bmw")
         )
         marcasRecView.apply {
-            layoutManager = LinearLayoutManager(requireActivity())
+            layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
             adapter = MarcasAdapter(listMarcas)
         }
     }

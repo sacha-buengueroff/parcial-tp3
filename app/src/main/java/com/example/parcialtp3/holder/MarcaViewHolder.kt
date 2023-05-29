@@ -27,7 +27,9 @@ class MarcaViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     fun setMakeImage(make: String) {
         val imgMake = vista.findViewById<ImageView>(R.id.imgMarcaLogo)
         try {
+            println("make:" + make)
             val drawableId = vista.resources.getIdentifier(make, "drawable", vista.context.packageName)
+            println("drawableId:" + drawableId)
             imgMake.setImageResource(drawableId)
         }catch (e: Exception)
         {

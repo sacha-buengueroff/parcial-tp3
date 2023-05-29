@@ -20,7 +20,7 @@ class MarcasAdapter(private val marcaList: List<Marca>): RecyclerView.Adapter<Ma
     override fun onBindViewHolder(holder: MarcaViewHolder, position: Int) {
         val marca = marcaList[position]
         holder.setMarca(marca.marca)
-        holder.setAmount(marca.amount.toString())
+        holder.setAmount("+" + marca.amount)
         holder.setMakeImage(marca.make)
     }
 

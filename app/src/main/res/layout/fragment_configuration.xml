@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ConfigurationFragment">
+    android:orientation="vertical"
+    android:layout_marginTop="106sp"
+    android:layout_marginLeft="26sp"
+    android:layout_marginRight="26sp"
+    tools:context=".fragments.ConfigurationFragment"
+    android:background="@color/backgroundConfig">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="config" />
+        android:id="@+id/labelGenerales"
+        android:layout_width="75dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="18dp"
+        android:gravity="top"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/labelGenerales"
+        android:textColor="@color/colorGenerales"
+        android:textSize="14sp"
+        android:translationY="-1.8sp" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/labelModoOscuro"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="16sp"
+            android:layout_marginBottom="16sp"
+            android:text="@string/labelModoOscuro"
+            android:textSize="16sp"
+            android:letterSpacing="0.01"
+            android:textColor="@color/colorTextConfig"
+            android:lineSpacingExtra="5sp"
+            android:gravity="center_vertical" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/labelNotificaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="16sp"
+            android:layout_marginBottom="16sp"
+            android:text="@string/labelNotificaciones"
+            android:textSize="16sp"
+            android:letterSpacing="0.01"
+            android:textColor="@color/colorTextConfig"
+            android:lineSpacingExtra="5sp"
+            android:gravity="center_vertical" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+</LinearLayout>

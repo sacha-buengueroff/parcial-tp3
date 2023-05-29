@@ -10,5 +10,10 @@
     <color name="borders">#000000</color>
     <color name="mtrl_textinput_default_box_stroke_color">#000000</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="darkBlue">#001D42</color>
+    <color name="grey">#DCDCDC</color>
+    <color name="colorGenerales">#1B72C0</color>
+    <color name="colorTextConfig">#001E2F</color>
+    <color name="backgroundConfig">#FCFCFF</color>
     <color name="sombras">#57000000</color>
 </resources>

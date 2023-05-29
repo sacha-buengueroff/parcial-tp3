@@ -7,7 +7,7 @@ import com.example.parcialtp3.R
 import com.example.parcialtp3.holder.CarViewHolder
 import com.example.parcialtp3.model.domain.Car
 
-class   CarsAdapter (private val carList: List<Car>): RecyclerView.Adapter<CarViewHolder>() {
+class CarsAdapter (private val carList: List<Car>): RecyclerView.Adapter<CarViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -21,6 +21,11 @@ class   CarsAdapter (private val carList: List<Car>): RecyclerView.Adapter<CarVi
         val car = carList[position]
         holder.setCarClass(car.carClass)
         holder.setFuelType(car.fuelType)
+        holder.settransmission(car.transmission)
+        //holder.setModel(car.model)
+        holder.setCarClass(car.carClass)
+        holder.setModel(car.model)
+        holder.setYear(car.year.toString())
     }
 
 }

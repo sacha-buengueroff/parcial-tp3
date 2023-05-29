@@ -6,6 +6,8 @@
     android:layout_height="112dp"
     android:id="@+id/carViewItem"
     android:layout_marginTop="10dp"
+    android:elevation="50dp"
+    app:cardCornerRadius="25dp"
     tools:context=".fragments.CarViewItemFragment">
 
     <LinearLayout
@@ -22,7 +24,7 @@
             <TextView
                 android:id="@+id/txtCarModel"
                 android:layout_width="142dp"
-                android:layout_height="22dp"
+                android:layout_height="24dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="18dp"
@@ -31,15 +33,15 @@
                 android:gravity="top"
                 android:lineHeight="20sp"
                 android:text="modelo"
-                android:textColor="#001D42"
-                android:textSize="17sp" />
+                android:textColor="@color/darkBlue"
+                android:textSize="19sp" />
 
             <View
                 android:id="@+id/car_logo_pn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/avatar_car" />
         </LinearLayout>
@@ -68,10 +70,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_marginLeft="5dp"
-                    android:fontFamily="@font/fira_sans_bold"
-                    android:textColor="#001D42"
                     android:layout_weight="1"
-                    android:text="Transmission" />
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:text="Transmission"
+                    android:textColor="@color/darkBlue" />
 
             </LinearLayout>
 
@@ -94,7 +96,7 @@
                     android:layout_height="25dp"
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/fira_sans_bold"
-                    android:textColor="#001D42"
+                    android:textColor="@color/darkBlue"
                     android:layout_weight="1"
                     android:text="Fuel Type" />
 
@@ -119,7 +121,7 @@
                     android:layout_height="25dp"
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/fira_sans_bold"
-                    android:textColor="#001D42"
+                    android:textColor="@color/darkBlue"
                     android:layout_weight="1"
                     android:text="year" />
 
@@ -144,7 +146,7 @@
                     android:layout_height="25dp"
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/fira_sans_bold"
-                    android:textColor="#001D42"
+                    android:textColor="@color/darkBlue"
                     android:layout_weight="1"
                     android:text="Class" />
 

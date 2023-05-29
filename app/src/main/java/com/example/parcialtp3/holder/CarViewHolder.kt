@@ -13,23 +13,27 @@ class CarViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     }
 
     fun setCarClass(carClass: String) {
-        val txtClass = vista.findViewById<TextView>(R.id.carClass)
+        val txtClass = vista.findViewById<TextView>(R.id.txtClass)
         txtClass.text = carClass
     }
-    fun setFuelType(carClass: String) {
-        val txtClass = vista.findViewById<TextView>(R.id.fuelType)
-        txtClass.text = carClass
+    fun setFuelType(fuelType: String) {
+        val txtClass = vista.findViewById<TextView>(R.id.txtFuelType)
+        txtClass.text = fuelType
     }
-    fun setMake(carClass: String) {
-
-    }fun setModel(carClass: String) {
+    fun setMakeImage(make: String) {
 
     }
-    fun settransmission(carClass: String) {
-
+    fun setModel(model: String) {
+        val txtClass = vista.findViewById<TextView>(R.id.txtCarModel)
+        txtClass.text = model
     }
-    fun setYear(carClass: String) {
-
+    fun settransmission(transmission: String) {
+        val txtClass = vista.findViewById<TextView>(R.id.txtTransmission)
+        txtClass.text = if (transmission == "a") "Automático" else "Manual"
+    }
+    fun setYear(year: String) {
+        val txtClass = vista.findViewById<TextView>(R.id.txtYear)
+        txtClass.text = year
     }
 
 }

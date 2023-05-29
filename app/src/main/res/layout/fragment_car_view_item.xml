@@ -5,54 +5,152 @@
     android:layout_width="341dp"
     android:layout_height="112dp"
     android:id="@+id/carViewItem"
+    android:layout_marginTop="10dp"
     tools:context=".fragments.CarViewItemFragment">
 
-    <TextView
-        android:id="@+id/carModel"
-        android:layout_width="142dp"
-        android:layout_height="20dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_extrabold"
-        android:gravity="top"
-        android:lineHeight="20sp"
-        android:text="modelo"
-        android:textColor="#001D42"
-        android:textSize="17sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/carClass"
-        android:layout_width="160dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/fira_sans_bold"
-        android:text="Cualquier Texto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/fuelType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Hola Mundo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/txtCarModel"
+                android:layout_width="142dp"
+                android:layout_height="22dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/fira_sans_bold"
+                android:gravity="top"
+                android:lineHeight="20sp"
+                android:text="modelo"
+                android:textColor="#001D42"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/car_logo_pn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/avatar_car" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <View
+                    android:id="@+id/imgTransmission"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/transmission"/>
+
+                <TextView
+                    android:id="@+id/txtTransmission"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:textColor="#001D42"
+                    android:layout_weight="1"
+                    android:text="Transmission" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/imgFuelType"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fueltype"/>
+
+                <TextView
+                    android:id="@+id/txtFuelType"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:textColor="#001D42"
+                    android:layout_weight="1"
+                    android:text="Fuel Type" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/imgYear"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/calendar"/>
+
+                <TextView
+                    android:id="@+id/txtYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:textColor="#001D42"
+                    android:layout_weight="1"
+                    android:text="year" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/imgClass"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings"/>
+
+                <TextView
+                    android:id="@+id/txtClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:textColor="#001D42"
+                    android:layout_weight="1"
+                    android:text="Class" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

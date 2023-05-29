@@ -37,8 +37,6 @@ class LoginFragment : Fragment() {
         txtPass = loginView.findViewById<TextView>(R.id.txt_Password)
         txtPass.transformationMethod = PasswordTransformationMethod.getInstance()
         btnLogin = loginView.findViewById<Button>(R.id.btnLogin)
-        var toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar_custom)
-        ToolbarUitls.updateToolbarVisibility(toolbar, true)
 
         return loginView
     }

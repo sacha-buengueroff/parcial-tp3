@@ -6,8 +6,7 @@ import retrofit2.http.GET
 
 interface CarService {
 
-    @GET("cars?year=2018")
-    //TODO: fijarese como hacer para no poner ningun parametro,
-    // por lo pronto el limit por default es 5 , solo limit no me deja ingresar y car solo tampoco
+    @GET("cars?make=toyota&make=bmw&make=volkswagen&limit=10")
+    //TODO: se fija un conjunto de marcas para evitar no tener el logo
     fun getCarList(): Call<List<Car>>
 }

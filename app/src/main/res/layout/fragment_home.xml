@@ -55,7 +55,12 @@
                     android:contentDescription="Botón de acción1"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
+<<<<<<< HEAD
                     android:src="@drawable/bmw" />
+=======
+                    android:src="@drawable/bmw_auto"
+                    android:contentDescription="Botón de acción1"/>
+>>>>>>> develop
 
                 <TextView
                     android:layout_width="wrap_content"

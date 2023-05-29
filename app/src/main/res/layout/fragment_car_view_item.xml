@@ -2,10 +2,25 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="341dp"
+    android:layout_height="112dp"
     android:id="@+id/carViewItem"
     tools:context=".fragments.CarViewItemFragment">
+
+    <TextView
+        android:id="@+id/carModel"
+        android:layout_width="142dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:gravity="top"
+        android:lineHeight="20sp"
+        android:text="modelo"
+        android:textColor="#001D42"
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/carClass"
@@ -15,6 +30,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="@font/fira_sans_bold"
         android:text="Cualquier Texto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

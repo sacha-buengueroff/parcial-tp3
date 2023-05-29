@@ -3,12 +3,7 @@
     <style name="Base.Theme.ParcialTP3" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!--<item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>-->
     </style>
-    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
-        <item name="android:background">@drawable/search_view_background</item>
-        <item name="android:padding">8dp</item>
-        <item name="android:queryBackground">@null</item>
-        <item name="android:iconifiedByDefault">false</item>
-    </style>
+
     <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
         <item name="android:background">@drawable/search_view_background</item>
         <item name="android:padding">8dp</item>

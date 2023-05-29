@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupToolbar() {
         setToolBarIcon()
-        ToolbarUitls.updateToolbarVisibility(toolbar, false)
+        //ToolbarUitls.updateToolbarVisibility(toolbar, false)
         ToolbarUitls.setToolBarVisibility(navHostController, supportActionBar, bottomNavView)
     }
 

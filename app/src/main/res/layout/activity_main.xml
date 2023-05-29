@@ -76,7 +76,7 @@ android:layout_height="match_parent">
                     android:fontFamily="@font/fira_sans_bold"
                     android:text="@string/rentcar"
                     android:textColor="@color/black"
-                    android:textSize="22sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -85,7 +85,6 @@ android:layout_height="match_parent">
                     android:layout_height="32dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:background="#FFCC00"
                     android:fontFamily="@font/fira_sans_bold"
                     android:text="@string/textConfig"
                     android:textColor="@color/black"

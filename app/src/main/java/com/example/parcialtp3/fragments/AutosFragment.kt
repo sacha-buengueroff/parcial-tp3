@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
@@ -20,7 +21,6 @@ import retrofit2.Response
 class AutosFragment : Fragment() {
     lateinit var autosView : View
     lateinit var autosRecView : RecyclerView
-    //lateinit var autosViewModel : AutosViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,9 +34,10 @@ class AutosFragment : Fragment() {
 
         autosRecView = autosView.findViewById<RecyclerView>(R.id.carsRecycleView)
         autosRecView.setHasFixedSize(true)
+        var toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar_custom)
 
         getCars()
-        //ToolbarUitls.updateToolbarVisibility()
+        ToolbarUitls.updateToolbarVisibility(toolbar, false)
 
         return autosView
     }

@@ -14,6 +14,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.parcialtp3.R
 import com.example.parcialtp3.ui.viewmodel.LoginViewModel
+import com.example.parcialtp3.utils.ToolbarUitls
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navigationView: NavigationView
     private lateinit var navHostController: NavController
     private lateinit var bottomNavView : BottomNavigationView
+    private lateinit var toolbar: Toolbar
     private var isHamburgerMenu: Boolean  = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,8 +38,8 @@ class MainActivity : AppCompatActivity() {
         navHostController = navHostFragment.navController
         bottomNavView = findViewById(R.id.bottom_bar)
 
-        //Set up custom tool bar
-        var toolbar = findViewById<Toolbar>(R.id.toolbar_custom)
+        //Setup new toolbar
+        toolbar = findViewById<Toolbar>(R.id.toolbar_custom)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
@@ -49,29 +51,10 @@ class MainActivity : AppCompatActivity() {
 
         //Set up Drawer Layout menu
         setupDrawerLayout()
+
+        //setup toolbar visibility
+        setupToolbar()
     }
-
-    private fun setupNavHeader() {
-        val userNameTextView =
-            navigationView.getHeaderView(0).findViewById<TextView>(R.id.txt_UserName)
-        var loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
-        loginViewModel.userName.observe(this) { result ->
-            userNameTextView.text = result.toString()
-        }
-    }
-
-    private fun setupDrawerLayout() {
-        navigationView.setupWithNavController(navHostController)
-
-        NavigationUI.setupActionBarWithNavController(this, navHostController, drawerLayout)
-
-        /*navHostController.addOnDestinationChangedListener { _, _, _ ->
-            supportActionBar?.setHomeAsUpIndicator(R.drawable.menu)
-        }*/
-        setToolBarIcon()
-        setToolBarVisibility()
-    }
-
     override fun onSupportNavigateUp(): Boolean {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
@@ -85,19 +68,27 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
-    fun setToolBarVisibility () {
-        navHostController.addOnDestinationChangedListener { _, destination, _ ->
-            if(destination.id == R.id.loginFragment) {
-                supportActionBar?.hide()
-                bottomNavView.visibility = View.GONE
-            } else {
-                supportActionBar?.show()
-                bottomNavView.visibility = View.VISIBLE
-            }
+    private fun setupToolbar() {
+        setToolBarIcon()
+        ToolbarUitls.updateToolbarVisibility(toolbar, false)
+        ToolbarUitls.setToolBarVisibility(navHostController, supportActionBar, bottomNavView)
+    }
+
+    private fun setupNavHeader() {
+        val userNameTextView =
+            navigationView.getHeaderView(0).findViewById<TextView>(R.id.txt_UserName)
+        var loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        loginViewModel.userName.observe(this) { result ->
+            userNameTextView.text = result.toString()
         }
     }
 
-    fun setToolBarIcon () {
+    private fun setupDrawerLayout() {
+        navigationView.setupWithNavController(navHostController)
+        NavigationUI.setupActionBarWithNavController(this, navHostController, drawerLayout)
+    }
+
+    private fun setToolBarIcon () {
         navHostController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.homeFragment) {
                 // Mostrar el icono de hamburguesa

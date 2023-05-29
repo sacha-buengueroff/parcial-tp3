@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Parcial TP3</string>
     <string name="textRegister">Register</string>
+    <string name="textConfig">Configuracion</string>
     <string name="btnLogin">INGRESAR</string>
     <string name="olvideContra">Olvidé la contraseña</string>
     <string name="premier">Premier</string>

@@ -12,6 +12,7 @@ import com.example.parcialtp3.adapters.CarsAdapter
 import com.example.parcialtp3.apiServiceBuilder.APIServicesBuilder
 import com.example.parcialtp3.model.domain.Car
 import com.example.parcialtp3.ui.viewmodel.AutosViewModel
+import com.example.parcialtp3.utils.ToolbarUitls
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -35,6 +36,7 @@ class AutosFragment : Fragment() {
         autosRecView.setHasFixedSize(true)
 
         getCars()
+        //ToolbarUitls.updateToolbarVisibility()
 
         return autosView
     }

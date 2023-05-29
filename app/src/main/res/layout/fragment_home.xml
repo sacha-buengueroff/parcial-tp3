@@ -52,10 +52,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:background=" #FFCC00"
-                    android:contentDescription="Botón de acción1"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bmw"/>
+                    android:src="@drawable/bmw_auto"
+                    android:contentDescription="Botón de acción1"/>
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -23,8 +23,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
 
         homeView = inflater.inflate(R.layout.fragment_home, container, false)
@@ -43,7 +42,7 @@ class HomeFragment : Fragment() {
     private fun getMarcas() {
 
         val listMarcas: List<Marca> = listOf(
-            Marca("Maserati","5", "maserati"),
+            Marca("Maserati", "5", "maserati"),
             Marca("Mercedes", "32", "mercedes"),
             Marca("TOGG", "8", "togg"),
             Marca("Porsche", "10", "porsche"),
@@ -51,7 +50,8 @@ class HomeFragment : Fragment() {
             Marca("BMW", "25", "bmw")
         )
         marcasRecView.apply {
-            layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+            layoutManager =
+                LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
             adapter = MarcasAdapter(listMarcas)
         }
     }

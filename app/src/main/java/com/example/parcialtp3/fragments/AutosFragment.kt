@@ -18,16 +18,15 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class AutosFragment : Fragment() {
-    lateinit var autosView : View
-    lateinit var autosRecView : RecyclerView
+    lateinit var autosView: View
+    lateinit var autosRecView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         autosView = inflater.inflate(R.layout.fragment_autos, container, false)
 
@@ -48,14 +47,14 @@ class AutosFragment : Fragment() {
     private fun getCars() {
         val service = APIServicesBuilder.create()
 
-        service.getCarList().enqueue(object: Callback<List<Car>> {
+        service.getCarList().enqueue(object : Callback<List<Car>> {
             override fun onResponse(
-                call: Call<List<Car>>,
-                response: Response<List<Car>>
-            ){
+                call: Call<List<Car>>, response: Response<List<Car>>
+            ) {
                 println(response.body()!!)
                 loadRecViewData(response.body() ?: emptyList())
             }
+
             override fun onFailure(call: Call<List<Car>>, t: Throwable) {
                 println(t.message)
             }
@@ -68,5 +67,4 @@ class AutosFragment : Fragment() {
             adapter = CarsAdapter(list)
         }
     }
-
 }

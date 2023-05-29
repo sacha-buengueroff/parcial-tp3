@@ -19,7 +19,12 @@ object ToolbarUitls {
         rentcarTextView.visibility = if (!isConfigVisible) View.VISIBLE else View.GONE
 
     }
-    fun setToolBarVisibility(navHostController: NavController, supportActionBar: ActionBar?, bottomNavView: BottomNavigationView) {
+
+    fun setToolBarVisibility(
+        navHostController: NavController,
+        supportActionBar: ActionBar?,
+        bottomNavView: BottomNavigationView
+    ) {
         navHostController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.loginFragment) {
                 supportActionBar?.hide()
@@ -29,18 +34,5 @@ object ToolbarUitls {
                 bottomNavView.visibility = View.VISIBLE
             }
         }
-    }
-
-    fun setToolBarIcon(navHostController: NavController, supportActionBar: ActionBar?): Boolean {
-        var isHamburgerMenu = false
-        navHostController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.homeFragment || destination.id == R.id.loginFragment) {
-                supportActionBar?.setHomeAsUpIndicator(R.drawable.menu)
-                isHamburgerMenu = true
-            } else {
-                supportActionBar?.setHomeAsUpIndicator(R.drawable.back_arrow)
-            }
-        }
-        return isHamburgerMenu
     }
 }

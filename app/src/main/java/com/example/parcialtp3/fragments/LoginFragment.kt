@@ -19,27 +19,23 @@ import com.example.parcialtp3.utils.ToolbarUitls
 
 class LoginFragment : Fragment() {
 
-    lateinit var loginView : View
-    lateinit var txtUserName : TextView
+    lateinit var loginView: View
+    lateinit var txtUserName: TextView
     lateinit var txtPass: TextView
-    lateinit var btnLogin : Button
+    lateinit var btnLogin: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        loginView =  inflater.inflate(R.layout.login_fragment, container, false)
+        loginView = inflater.inflate(R.layout.login_fragment, container, false)
 
         txtUserName = loginView.findViewById<TextView>(R.id.txt_UserName)
         txtPass = loginView.findViewById<TextView>(R.id.txt_Password)
         txtPass.transformationMethod = PasswordTransformationMethod.getInstance()
         btnLogin = loginView.findViewById<Button>(R.id.btnLogin)
-        var toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar_custom)
-        ToolbarUitls.updateToolbarVisibility(toolbar, true)
 
         return loginView
     }
@@ -55,20 +51,17 @@ class LoginFragment : Fragment() {
                 loginViewModel.savePass(txtPass.text.toString())
                 var action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
                 loginView.findNavController().navigate(action)
-            } catch (error: IllegalArgumentException){
+            } catch (error: IllegalArgumentException) {
                 loginError(requireContext(), error.message)
             }
         }
     }
 
     private fun loginError(context: Context, errorMessage: String?) {
-        val alertDialog = AlertDialog.Builder(context)
-            .setTitle("Error")
-            .setMessage(errorMessage)
+        val alertDialog = AlertDialog.Builder(context).setTitle("Error").setMessage(errorMessage)
             .setPositiveButton("OK") { dialog, _ ->
                 dialog.dismiss()
-            }
-            .create()
+            }.create()
         alertDialog.show()
     }
 }

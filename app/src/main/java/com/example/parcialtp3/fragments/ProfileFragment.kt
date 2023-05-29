@@ -23,7 +23,6 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         profileView = inflater.inflate(R.layout.fragment_profile, container, false)
 
         profileName = profileView.findViewById<TextView>(R.id.txt_profileName)

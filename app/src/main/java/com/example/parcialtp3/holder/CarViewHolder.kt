@@ -1,14 +1,12 @@
 package com.example.parcialtp3.holder
 
-import android.annotation.SuppressLint
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
 import java.lang.Exception
-import java.util.Locale
+
 
 class CarViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private var vista: View

@@ -7,6 +7,6 @@ import retrofit2.http.GET
 interface CarService {
 
     @GET("cars?make=toyota&make=bmw&make=volkswagen&limit=10")
-    //TODO: se fija un conjunto de marcas para evitar no tener el logo
+    //se fija un conjunto de marcas para evitar no tener el logo
     fun getCarList(): Call<List<Car>>
 }

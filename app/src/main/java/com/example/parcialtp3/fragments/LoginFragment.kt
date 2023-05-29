@@ -31,7 +31,6 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         loginView =  inflater.inflate(R.layout.login_fragment, container, false)
 
         txtUserName = loginView.findViewById<TextView>(R.id.txt_UserName)

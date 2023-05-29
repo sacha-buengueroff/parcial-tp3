@@ -1,7 +1,6 @@
 package com.example.parcialtp3.ui.view
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.widget.Toolbar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity

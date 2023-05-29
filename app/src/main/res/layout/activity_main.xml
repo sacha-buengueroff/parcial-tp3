@@ -102,6 +102,12 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/avatar_car" />
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
 

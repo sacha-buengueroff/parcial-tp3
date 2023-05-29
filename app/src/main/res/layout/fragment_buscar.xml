@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.BuscarFragment"
-    android:layout_marginTop="?attr/actionBarSize">
+    android:layout_marginTop="?attr/actionBarSize"
+    android:background="@drawable/background_perfil">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

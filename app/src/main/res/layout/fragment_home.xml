@@ -10,9 +10,9 @@
     <LinearLayout
         android:id="@+id/linearLayoutInicio"
         android:layout_width="350dp"
-        android:layout_height="400dp"
+        android:layout_height="464dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="200dp"
         android:background="#F5F5F5"
@@ -22,6 +22,17 @@
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/searchView"
+            style="@style/SearchViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/search_view_border"
+            android:iconifiedByDefault="false"
+            android:queryHint="Buscar..." />
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -40,20 +51,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:background=" #FFCC00"
+                    android:contentDescription="Botón de acción1"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bmw"
-                    android:contentDescription="Botón de acción1"/>
+                    android:src="@drawable/bmw" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
+                    android:contentDescription="Descripción del contenido"
                     android:fontFamily="@font/fira_sans_bold"
                     android:text="@string/deportivos"
                     android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:contentDescription="Descripción del contenido"/>
+                    android:textSize="25dp" />
 
                 <TextView
                     android:id="@+id/textoCardAbajo1"
@@ -63,10 +74,10 @@
                     android:layout_alignParentBottom="false"
                     android:layout_gravity="bottom|right"
                     android:layout_marginRight="20dp"
+                    android:contentDescription="Descripción del contenido"
                     android:fontFamily="@font/fira_sans_bold"
                     android:text="@string/filtro"
-                    android:textColor="@color/white"
-                    android:contentDescription="Descripción del contenido"/>
+                    android:textColor="@color/white" />
 
             </androidx.cardview.widget.CardView>
 
@@ -89,20 +100,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:background=" #3330E5"
+                    android:contentDescription="Botón de acción2"
                     android:padding="15dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bmw_suv"
-                    android:contentDescription="Botón de acción2"/>
+                    android:src="@drawable/bmw_suv" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
+                    android:contentDescription="Descripción del contenido"
                     android:fontFamily="@font/fira_sans_bold"
                     android:text="@string/suv"
                     android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:contentDescription="Descripción del contenido"/>
+                    android:textSize="25dp" />
 
                 <TextView
                     android:id="@+id/textoCardAbajo2"
@@ -112,10 +123,10 @@
                     android:layout_alignParentBottom="false"
                     android:layout_gravity="bottom|right"
                     android:layout_marginRight="20dp"
+                    android:contentDescription="Descripción del contenido"
                     android:fontFamily="@font/fira_sans_bold"
                     android:text="@string/filtro"
-                    android:textColor="@color/white"
-                    android:contentDescription="Descripción del contenido"/>
+                    android:textColor="@color/white" />
 
             </androidx.cardview.widget.CardView>
 
@@ -138,20 +149,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:background="#04D9FF"
+                    android:contentDescription="Botón de acción3"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bmw_electrico"
-                    android:contentDescription="Botón de acción3"/>
+                    android:src="@drawable/bmw_electrico" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
+                    android:contentDescription="Descripción del contenido"
                     android:fontFamily="@font/fira_sans_bold"
                     android:text="@string/Electricos"
                     android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:contentDescription="Descripción del contenido"/>
+                    android:textSize="25dp" />
 
                 <TextView
                     android:id="@+id/textoCardAbajo3"
@@ -161,10 +172,10 @@
                     android:layout_alignParentBottom="false"
                     android:layout_gravity="bottom|right"
                     android:layout_marginRight="20dp"
+                    android:contentDescription="Descripción del contenido"
                     android:fontFamily="@font/fira_sans_bold"
                     android:text="@string/filtro"
-                    android:textColor="@color/white"
-                    android:contentDescription="Descripción del contenido"/>
+                    android:textColor="@color/white" />
 
             </androidx.cardview.widget.CardView>
 

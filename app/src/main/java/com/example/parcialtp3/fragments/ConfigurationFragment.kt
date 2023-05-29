@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import com.example.parcialtp3.R
+import com.example.parcialtp3.utils.ToolbarUitls
 
 class ConfigurationFragment : Fragment() {
-
-    lateinit var fragmentView: View
+    private lateinit var configView: View
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -18,9 +19,9 @@ class ConfigurationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        fragmentView = inflater.inflate(R.layout.fragment_configuration, container, false)
-        return fragmentView
-        }
-
+        configView = inflater.inflate(R.layout.fragment_configuration, container, false)
+        var toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar_custom)
+        ToolbarUitls.updateToolbarVisibility(toolbar, true)
+        return configView
+    }
 }

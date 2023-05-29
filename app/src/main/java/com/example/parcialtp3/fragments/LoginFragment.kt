@@ -9,11 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.parcialtp3.R
 import com.example.parcialtp3.ui.viewmodel.LoginViewModel
+import com.example.parcialtp3.utils.ToolbarUitls
 
 class LoginFragment : Fragment() {
 
@@ -36,6 +38,8 @@ class LoginFragment : Fragment() {
         txtPass = loginView.findViewById<TextView>(R.id.txt_Password)
         txtPass.transformationMethod = PasswordTransformationMethod.getInstance()
         btnLogin = loginView.findViewById<Button>(R.id.btnLogin)
+        var toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar_custom)
+        ToolbarUitls.updateToolbarVisibility(toolbar, true)
 
         return loginView
     }

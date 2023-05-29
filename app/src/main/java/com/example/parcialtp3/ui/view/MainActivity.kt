@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         //Setup new toolbar
         toolbar = findViewById<Toolbar>(R.id.toolbar_custom)
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         //Set up Nav Header
         setupNavHeader()

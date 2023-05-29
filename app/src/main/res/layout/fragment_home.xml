@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
+    android:layout_marginTop="?attr/actionBarSize"
     tools:context=".fragments.HomeFragment">
 
     <LinearLayout
@@ -12,7 +13,7 @@
         android:layout_width="350dp"
         android:layout_height="599dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="200dp"
         android:background="#F5F5F5"
@@ -21,6 +22,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/searchView"
+            style="@style/SearchViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/search_view_border"
+            android:iconifiedByDefault="false"
+            android:queryHint="Buscar..." />
+
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
 import com.example.parcialtp3.adapters.MarcasAdapter
 import com.example.parcialtp3.domain.Marca
+import androidx.appcompat.widget.Toolbar
+import com.example.parcialtp3.R
+import com.example.parcialtp3.utils.ToolbarUitls
 
 
 class HomeFragment : Fragment() {
@@ -19,7 +22,6 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -31,6 +33,8 @@ class HomeFragment : Fragment() {
         marcasRecView = homeView.findViewById<RecyclerView>(R.id.marcasRecycleView)
         marcasRecView.setHasFixedSize(true)
         getMarcas()
+        var toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar_custom)
+        ToolbarUitls.updateToolbarVisibility(toolbar, false)
         return homeView
     }
 
@@ -53,6 +57,4 @@ class HomeFragment : Fragment() {
             adapter = MarcasAdapter(listMarcas)
         }
     }
-
-
 }

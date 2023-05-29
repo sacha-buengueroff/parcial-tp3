@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="106sp"
+    android:layout_marginTop="?attr/actionBarSize"
     android:layout_marginLeft="26sp"
     android:layout_marginRight="26sp"
     tools:context=".fragments.ConfigurationFragment"

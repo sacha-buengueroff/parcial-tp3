@@ -1,6 +1,6 @@
 package com.example.parcialtp3.apiServiceBuilder
 
-import com.example.parcialtp3.model.domain.Car
+import com.example.parcialtp3.domain.Car
 import retrofit2.Call
 import retrofit2.http.GET
 

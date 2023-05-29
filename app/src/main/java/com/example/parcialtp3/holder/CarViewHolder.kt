@@ -33,7 +33,7 @@ class CarViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
             imgMake.setImageResource(drawableId)
         }catch (e:Exception)
         {
-          println("imagen no disponible")
+          println("Imagen no disponible")
         }
     }
 

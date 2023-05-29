@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
 import com.example.parcialtp3.holder.CarViewHolder
-import com.example.parcialtp3.model.domain.Car
+import com.example.parcialtp3.domain.Car
 
 class CarsAdapter (private val carList: List<Car>): RecyclerView.Adapter<CarViewHolder>() {
 

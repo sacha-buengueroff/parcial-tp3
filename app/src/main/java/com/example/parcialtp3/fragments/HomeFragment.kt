@@ -5,14 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
 import com.example.parcialtp3.adapters.MarcasAdapter
 import com.example.parcialtp3.domain.Marca
 import androidx.appcompat.widget.Toolbar
-import com.example.parcialtp3.R
 import com.example.parcialtp3.utils.ToolbarUitls
 
 

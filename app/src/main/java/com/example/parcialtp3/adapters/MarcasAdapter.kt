@@ -10,8 +10,7 @@ import com.example.parcialtp3.holder.MarcaViewHolder
 class MarcasAdapter(private val marcaList: List<Marca>): RecyclerView.Adapter<MarcaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MarcaViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_marca_view_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_marca_view_item, parent, false)
         return MarcaViewHolder(view)
     }
 

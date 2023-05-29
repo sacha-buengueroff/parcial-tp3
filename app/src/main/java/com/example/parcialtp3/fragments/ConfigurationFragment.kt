@@ -11,7 +11,6 @@ import com.example.parcialtp3.utils.ToolbarUitls
 
 class ConfigurationFragment : Fragment() {
     private lateinit var configView: View
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

@@ -13,10 +13,19 @@
     <string name="slider_Profile">Perfil</string>
     <string name="slider_Configuration">Configuración</string>
     <string name="slider_Favorites">Favoritos</string>
+    <string name="deportivos">Deportivos</string>
+    <string name="suv">SUV</string>
+    <string name="Electricos">ELÉCTRICOS</string>
+    <string name="filtro">Filtro >|</string>
 
     <string name="bottom_Home">Home</string>
     <string name="bottom_Autos">Autos</string>
     <string name="bottom_Buscar">Buscar</string>
     <string name="bottom_Perfil">Perfil</string>
     <string name="Menu">Menu</string>
+    <string name="Notificaciones">Notificaciones</string>
+
+    <string name="labelGenerales">Generales</string>
+    <string name="labelModoOscuro">Modo Oscuro</string>
+    <string name="labelNotificaciones">Notificaciones</string>
 </resources>

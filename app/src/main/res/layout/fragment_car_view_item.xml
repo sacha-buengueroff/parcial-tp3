@@ -38,14 +38,13 @@
                 android:textColor="@color/darkBlue"
                 android:textSize="19sp" />
 
-            <View
-                android:id="@+id/car_logo_pn"
+            <ImageView
+                android:id="@+id/imgCarLogo"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/avatar_car" />
+                android:layout_marginTop="16dp"/>
         </LinearLayout>
 
         <LinearLayout

@@ -22,10 +22,10 @@ class CarsAdapter (private val carList: List<Car>): RecyclerView.Adapter<CarView
         holder.setCarClass(car.carClass)
         holder.setFuelType(car.fuelType)
         holder.settransmission(car.transmission)
-        //holder.setModel(car.model)
         holder.setCarClass(car.carClass)
         holder.setModel(car.model)
         holder.setYear(car.year.toString())
+        holder.setMakeImage(car.make)
     }
 
 }

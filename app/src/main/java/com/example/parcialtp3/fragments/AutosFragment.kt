@@ -5,36 +5,37 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
 import com.example.parcialtp3.adapters.CarsAdapter
 import com.example.parcialtp3.apiServiceBuilder.APIServicesBuilder
-import com.example.parcialtp3.model.domain.Car
-import com.example.parcialtp3.ui.viewmodel.AutosViewModel
+import com.example.parcialtp3.domain.Car
+import com.example.parcialtp3.utils.ToolbarUitls
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class AutosFragment : Fragment() {
-    lateinit var autosView : View
-    lateinit var autosRecView : RecyclerView
-    //lateinit var autosViewModel : AutosViewModel
+    lateinit var autosView: View
+    lateinit var autosRecView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         autosView = inflater.inflate(R.layout.fragment_autos, container, false)
 
         autosRecView = autosView.findViewById<RecyclerView>(R.id.carsRecycleView)
         autosRecView.setHasFixedSize(true)
+        var toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar_custom)
 
         getCars()
+        ToolbarUitls.updateToolbarVisibility(toolbar, false)
 
         return autosView
     }
@@ -46,14 +47,14 @@ class AutosFragment : Fragment() {
     private fun getCars() {
         val service = APIServicesBuilder.create()
 
-        service.getCarList().enqueue(object: Callback<List<Car>> {
+        service.getCarList().enqueue(object : Callback<List<Car>> {
             override fun onResponse(
-                call: Call<List<Car>>,
-                response: Response<List<Car>>
-            ){
+                call: Call<List<Car>>, response: Response<List<Car>>
+            ) {
                 println(response.body()!!)
                 loadRecViewData(response.body() ?: emptyList())
             }
+
             override fun onFailure(call: Call<List<Car>>, t: Throwable) {
                 println(t.message)
             }
@@ -66,5 +67,4 @@ class AutosFragment : Fragment() {
             adapter = CarsAdapter(list)
         }
     }
-
 }

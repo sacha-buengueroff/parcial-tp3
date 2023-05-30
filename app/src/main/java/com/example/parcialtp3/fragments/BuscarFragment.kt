@@ -5,20 +5,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import com.example.parcialtp3.R
+import com.example.parcialtp3.utils.ToolbarUitls
 
 class BuscarFragment : Fragment() {
-    lateinit var fragmentView: View
+    lateinit var buscarView: View
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        fragmentView = inflater.inflate(R.layout.fragment_buscar, container, false)
-        return fragmentView
+        buscarView = inflater.inflate(R.layout.fragment_buscar, container, false)
+
+        var toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar_custom)
+        ToolbarUitls.updateToolbarVisibility(toolbar, false)
+
+        return buscarView
     }
-
-
-
 }

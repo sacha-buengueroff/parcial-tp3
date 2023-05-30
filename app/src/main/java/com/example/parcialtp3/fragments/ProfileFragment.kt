@@ -13,17 +13,15 @@ import com.example.parcialtp3.ui.viewmodel.LoginViewModel
 
 class ProfileFragment : Fragment() {
 
-    lateinit var profileView : View
-    lateinit var profileName : TextView
+    lateinit var profileView: View
+    lateinit var profileName: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         profileView = inflater.inflate(R.layout.fragment_profile, container, false)
 
         profileName = profileView.findViewById<TextView>(R.id.txt_profileName)
